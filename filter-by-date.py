@@ -46,7 +46,9 @@ while True:
         print(f"Received message from the client: {message.decode()}")
 
         # Parse the date and records data from the message
-        received_date = int(message[0:9])
+        received_date = message[1:9]
+        print(received_date)
+        received_date = int(received_date)
         received_records = message[9:]
 
         # Perform the query on records with the given date & send results back
