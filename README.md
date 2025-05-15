@@ -1,7 +1,7 @@
 # cs361-counter-microservice
 
 ## Overview
-This microservice takes two json parameters, a query date and a list of records to query for that date. It returns a list of the records that match the query date.
+This microservice runs locally and takes two json parameters, a query date and a list of records to query for that date. It returns a list of the records that match the query date.
 
 ### How to programmatically request data
 1. Connect to the ZMQ socket for the microservice.
