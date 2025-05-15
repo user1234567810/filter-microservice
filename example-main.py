@@ -1,5 +1,5 @@
 # Citation for the following program
-# Date: 24 April 2025
+# Date: 14 May 2025
 # Code adapted from the ZMQ Intro guide provided on the Canvas Assignment 4 page.
 # URL to Canvas page: https://canvas.oregonstate.edu/courses/2024370/assignments/9998154?module_item_id=25330208
 # URL to download the guide pdf: https://canvas.oregonstate.edu/courses/2024370/files/110412067?wrap=1
@@ -7,6 +7,7 @@
 # This code was heavily based on the example found on # zguide titled hwclient: https://zguide.zeromq.org/docs/chapter1/
 
 import zmq
+import json
 
 # Set up the environment so that we can begin creating sockets
 context = zmq.Context()
@@ -21,8 +22,23 @@ socket.connect("tcp://localhost:5555")
 print(f"Sending a message to the server...")
 
 # Send the CS361 message to the server
-records = ["20250102,Record 1", "20250102,Record 2", "20250110,Record 3", "20250111,Record 4", "20250110,Record 5", "20250102,Record 6", "20250109,Record 7", "20250204,Record 8", "20250402,Record 9", "20250402,Record 10"]
-socket.send_string(str(records))
+dataToSend = {
+    "queryDate": "20250102",
+    "records": [
+        {"date": "20250102", "entry": "Record 1 here"},
+        {"date": "20250102", "entry": "Record 2 here"},
+        {"date": "20250110", "entry": "Record 3 here"},
+        {"date": "20250111", "entry": "Record 4 here"},
+        {"date": "20250110", "entry": "Record 5 here"},
+        {"date": "20250102", "entry": "Record 6 here"},
+        {"date": "20250109", "entry": "Record 7 here"},
+        {"date": "20250204", "entry": "Record 8 here"},
+        {"date": "20250402", "entry": "Record 9 here"},
+        {"date": "20250402", "entry": "Record 10 here"},
+    ]
+}
+# socket.send_string(str(dataToSend))
+socket.send_string(json.dumps(dataToSend))
 
 # Get the server's response
 message = socket.recv()
