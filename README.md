@@ -1,4 +1,4 @@
-# cs361-counter-microservice
+# filter-microservice
 
 ## Overview
 This microservice runs locally and takes two json parameters, a query date and a list of records to query for that date. It returns a list of the records that match the query date.
