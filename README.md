@@ -27,6 +27,4 @@ This microservice runs locally and takes two json parameters, a query date and a
 4. You can convert the string back to using the json.loads() function.
 5. Send "Q" to close the connection if you are done using the microservice.
 
-![CS 361 UML Sequence Diagram 1](https://github.com/user-attachments/assets/b3222186-b90b-49d7-aaad-9c1e907c37de)
-
-![CS 361 UML Sequence Diagram](https://github.com/user-attachments/assets/5d25b8b5-18cd-48dc-b068-a626f68f13ab)
+![Screenshot 2025-05-14 220755](https://github.com/user-attachments/assets/6392075a-4083-4d66-907e-91b727e9904d)
