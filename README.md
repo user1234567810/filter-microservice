@@ -26,3 +26,5 @@ This microservice runs locally and takes two json parameters, a query date and a
     [{"date": "YYYYMMDD", "entry": "Record data here"}, {"date": "YYYYMMDD", "entry": "Record data here"},{"date": "YYYYMMDD", "entry": "Record data here"}]
 4. You can convert the string back to using the json.loads() function.
 5. Send "Q" to close the connection if you are done using the microservice.
+
+![CS 361 UML Sequence Diagram](https://github.com/user-attachments/assets/5d25b8b5-18cd-48dc-b068-a626f68f13ab)
