@@ -34,24 +34,19 @@ def filterByDate(queryDate, data):
     message = socket.recv()
 
     #End server (send Q to stop)
-    socket.send_string("Q")
+    # socket.send_string("Q")
 
     # Return decoded message
     return message.decode()
 
 # ------- Example usage ------------------------------------------------ #
-dataToSend = [
-            {"date": "20250102", "entry": "Record 1 here"},
-            {"date": "20250102", "entry": "Record 2 here"},
-            {"date": "20250110", "entry": "Record 3 here"},
-            {"date": "20250111", "entry": "Record 4 here"},
-            {"date": "20250110", "entry": "Record 5 here"},
-            {"date": "20250102", "entry": "Record 6 here"},
-            {"date": "20250109", "entry": "Record 7 here"},
-            {"date": "20250204", "entry": "Record 8 here"},
-            {"date": "20250402", "entry": "Record 9 here"},
-            {"date": "20250402", "entry": "Record 10 here"},
-        ]
+# Specify the file with the mood data records
+filename = "mood_data.json"
 
-filteredRecords = filterByDate(20250102, dataToSend)
+# Open and load the data from the specified file
+with open(filename, 'r') as file:
+    dataToSend = json.load(file)
+
+# Send the query date and records to the microservice, print the results
+filteredRecords = filterByDate('05/06/2025', dataToSend)
 print(filteredRecords)

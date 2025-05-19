@@ -1,0 +1,37 @@
+[
+    {
+        "date": "05/06/2025",
+        "rating": 8,
+        "note": "Feeling good"
+    },
+    {
+        "date": "05/06/2025",
+        "rating": 6,
+        "note": "blah"
+    },
+    {
+        "date": "05/06/2025",
+        "rating": 8,
+        "note": "great"
+    },
+    {
+        "date": "05/06/2025",
+        "rating": 7,
+        "note": "ok"
+    },
+    {
+        "date": "05/06/2025",
+        "rating": 9,
+        "note": "awesome"
+    },
+    {
+        "date": "05/07/2025",
+        "rating": 4,
+        "note": "jiffy"
+    },
+    {
+        "date": "05/07/2025",
+        "rating": 1,
+        "note": "bad"
+    }
+]

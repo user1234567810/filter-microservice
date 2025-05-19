@@ -24,7 +24,7 @@ def queryByDate(date, records):
 
     # Iterate through to find records with matching date
     for i in range(record_count):
-        if records[i]["date"] == str(date):
+        if records[i]["date"] == date:
             filtered_records.append(records[i])
     
     # Return the matching records
@@ -46,7 +46,7 @@ while True:
         # Parse the date and records data from the message
         received_date = data["queryDate"]
         print(f"Query date: {received_date}")
-        received_date = int(received_date)
+        # received_date = int(received_date)
         received_records = data["records"]
 
         # Perform the query on records with the given date & send results back
