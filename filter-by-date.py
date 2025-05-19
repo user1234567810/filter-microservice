@@ -46,7 +46,6 @@ while True:
         # Parse the date and records data from the message
         received_date = data["queryDate"]
         print(f"Query date: {received_date}")
-        # received_date = int(received_date)
         received_records = data["records"]
 
         # Perform the query on records with the given date & send results back
