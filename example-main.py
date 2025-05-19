@@ -45,8 +45,8 @@ filename = "mood_data.json"
 
 # Open and load the data from the specified file
 with open(filename, 'r') as file:
-    dataToSend = json.load(file)
+    records = json.load(file)
 
 # Send the query date and records to the microservice, print the results
-filteredRecords = filterByDate('05/06/2025', dataToSend)
+filteredRecords = filterByDate('05/07/2025', records)
 print(filteredRecords)
