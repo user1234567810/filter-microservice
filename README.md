@@ -7,13 +7,13 @@ This microservice runs locally and takes two parameters, a query date and a list
 1. Connect to the ZMQ socket for the microservice.
 2. Format the data to send to match the following:
     dataToSend = {
-        "queryDate": "MM/DD/YYY",
+        "queryDate": "MM/DD/YYYY",
         "records": [
-            {"date": "YYYYMMDD", "entry": "Record data here"},
-            {"date": "YYYYMMDD", "entry": "Record data here"},
-            {"date": "YYYYMMDD", "entry": "Record data here"},
-            {"date": "YYYYMMDD", "entry": "Record data here"},
-            {"date": "YYYYMMDD", "entry": "Record data here"},
+            {"date": "MM/DD/YYYY", "entry": "Record data here"},
+            {"date": "MM/DD/YYYY", "entry": "Record data here"},
+            {"date": "MM/DD/YYYY", "entry": "Record data here"},
+            {"date": "MM/DD/YYYY", "entry": "Record data here"},
+            {"date": "MM/DD/YYYY", "entry": "Record data here"},
         ]
     }
    Note that the query date should be formatted to match the date format in your records, i.e., records with dates 05/06/2025 should have "05/06/2025" for their query date, or records with 20250102 should use "20250102", etc.
